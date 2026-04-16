@@ -28,7 +28,7 @@ const Cocktails = () => {
             <img src="images/cocktail-right-leaf.png" alt="c-right-leaf" id='c-right-leaf' />
 
             <div className="list">
-                <div className="popular ml-5">
+                <div className="popular ml-20">
                     <h2>Most Popular Cocktails :</h2>
                     <ul>
                         {cocktailLists.map(({ name, country, detail, price }) => (
@@ -42,7 +42,7 @@ const Cocktails = () => {
                         ))}
                     </ul>
                 </div>
-                <div className="loved mr-5">
+                <div className="loved mr-20">
                     <h2>Most Loved Mocktails :</h2>
                     <ul>
                         {mockTailLists.map(({ name, country, detail, price }) => (
