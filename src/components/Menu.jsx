@@ -10,8 +10,8 @@ const Menu = () => {
     useGSAP(() => {
         gsap.fromTo("#title", { opacity: 0 }, { opacity: 1, duration: 1 })
         gsap.fromTo(".cocktail img", { opacity: 0, xPercent: -100 }, { opacity: 1, xPercent: 0, duration: 1, ease: "power1.inOut" })
-        gsap.fromTo(".details h2", { opacity: 0, yPercent: 100 }, { yPercent:0,opacity: 1, duration: 1, ease:"power1.inOut" })
-        gsap.fromTo(".details p", { opacity: 0, yPercent: 100 }, { yPercent:0,opacity: 1, duration: 1, ease:"power1.inOut" })
+        gsap.fromTo(".details h2", { opacity: 0, yPercent: 100 }, { yPercent: 0, opacity: 1, duration: 1, ease: "power1.inOut" })
+        gsap.fromTo(".details p", { opacity: 0, yPercent: 100 }, { yPercent: 0, opacity: 1, duration: 1, ease: "power1.inOut" })
     }, [currentIndex])
     const totalCocktails = allCocktails.length;
 
@@ -56,7 +56,7 @@ const Menu = () => {
                         <span>{prevCocktail.name}</span>
                         <img src="/images/right-arrow.png" alt="right-arrow" aria-hidden="true" />
                     </button>
-                    <button className="text-left" onClick={() => goToSlide(currentIndex + 1)}>
+                    <button className="text-left mr-5" onClick={() => goToSlide(currentIndex + 1)}>
                         <span>{nextCocktail.name}</span>
                         <img src="/images/left-arrow.png" alt="left-arrow" aria-hidden="true" />
                     </button>
@@ -67,7 +67,7 @@ const Menu = () => {
                 </div>
 
                 <div className='recipe'>
-                    <div ref={contentRef} className='info ml-25'>
+                    <div ref={contentRef} className='info ml-45 mb-15'>
                         <p>Recipe for:</p>
                         <p id='title'>{currentCocktail.name}</p>
                     </div>
